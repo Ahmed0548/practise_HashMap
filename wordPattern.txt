@@ -16,3 +16,15 @@ Example 3:
 
 Input: pattern = "aaaa", s = "dog cat cat dog"
 Output: false
+
+###############################################################################################
+# first change string to array of string using .split() method;
+# check if pattern.lenght() != array.length ==> return false because every char in pattern have word in array;
+# create HashMap to map string t0o array;
+# scan all string using for loop;
+# create variable key to store string.charAt(i);
+# create variable value to store array[i];
+# check if HashMap containsKey(key) and HashMap.get(key) != value; ==> return false because exist key has differnt value HashMap and array;
+# check if HashMap containsValue(value) and ! containsKey(key) ==> rewturn false because the value in array refer to differnt key;
+# otherwise put(key, value) to hashMap;
+# if loop exit by reaching the end then return true;
